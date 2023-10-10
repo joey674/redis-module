@@ -4,6 +4,8 @@ use std::collections::HashMap;
 use bytes::Bytes;
 use std::sync::Arc;
 
+use redis_module::protocol;
+
 
 /* 1. 使用 Tokio 提供的锁: 锁如果在多个.await的过程中持有，锁可能在线程间转移，某个任务刚获取完锁，还没使用完就因为 .await 让出了当前线程的所有权，结果下个任务又去获取了锁，造成死锁
    2. 使用 std   提供的锁: 只在单个任务.await持有，中间不经历其他异步任务 的情况下使用 */

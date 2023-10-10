@@ -14,18 +14,3 @@ bytes = "1"
 parking_lot = "0.12.1"
 
 
-[[example]]
-name = "hello_redis"
-path = "examples/hello-redis.rs"
-
-[[example]]
-name = "async_task_1"
-path = "examples/async-task_1.rs"
-
-[[example]]
-name = "async_task_2"
-path = "examples/async-task_2.rs"
-
-[[example]]
-name = "parking_lot"
-path = "examples/parking_lot.rs"
